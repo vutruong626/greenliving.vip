@@ -73,9 +73,8 @@
                                                     pattern="[0-9]*"
                                                     inputmode="numeric"
                                                     aria-labelledby="" />
-                                            <button type="submit" name="add-to-cart" value="2151" class="single_add_to_cart_button button alt">
-                                                <a href="{{asset('/cart/add/'.$gd_cordy_detail->id)}}" style="color: white;">Thanh toán</a>
-                                            </button>
+                                           
+                                                <a type="submit" name="add-to-cart" value="2151" class="single_add_to_cart_button button alt " href="{{asset('/cart/add/'.$gd_cordy_detail->id)}}" style="color: white;width: 33%;background: #80b500;height: 30px;text-align: center;padding: 4px;">Thanh toán</a>
                                         </div>
                                     </form>
                             </div>

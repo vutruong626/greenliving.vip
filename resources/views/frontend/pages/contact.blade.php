@@ -64,7 +64,6 @@
                                                                 <span class="icon-facebook"></span>
                                                             </a>
                                                         </div>
-                                                        
                                                     </div>		
                                                 </div>
 												<div class="sc_form_address_field">
@@ -120,22 +119,10 @@
 					</div>
 				</div>
 
-				</section> <!-- </section> class="post_content" itemprop="articleBody"> -->
-			</article> <!-- </article> class="itemscope post_item post_item_single post_featured_default post_format_standard post-767 page type-page status-publish hentry" itemscope itemtype="http://schema.org/Article"> -->	<section class="related_wrap related_wrap_empty"></section>
-		</div> <!-- </div> class="content"> -->
-	</div> <!-- </div> class="content_wrap"> -->
+				</section>
+			</article><section class="related_wrap related_wrap_empty"></section>
+		</div>
+	</div>
 </div>
-<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">if (typeof ORGANICS_GLOBALS == 'undefined') var ORGANICS_GLOBALS = {};ORGANICS_GLOBALS['ajax_url']			 = "{{asset('website_css/themes/wp-admin/admin-ajax.html')}}";ORGANICS_GLOBALS['ajax_nonce']		 = 'e69ff56c17';ORGANICS_GLOBALS['ajax_nonce_editor'] = 'cd26980418';ORGANICS_GLOBALS['site_url']			= '../index.html';ORGANICS_GLOBALS['vc_edit_mode']		= false;ORGANICS_GLOBALS['theme_font']		= 'Cantarell';ORGANICS_GLOBALS['theme_skin']			= 'trex2_no_less';ORGANICS_GLOBALS['theme_skin_color']		= '';ORGANICS_GLOBALS['theme_skin_bg_color']	= '';ORGANICS_GLOBALS['slider_height']	= 100;ORGANICS_GLOBALS['system_message']	= {message: '',status: '',header: ''};ORGANICS_GLOBALS['user_logged_in']	= false;ORGANICS_GLOBALS['toc_menu']		= '';ORGANICS_GLOBALS['toc_menu_home']	= false;ORGANICS_GLOBALS['toc_menu_top']	= false;ORGANICS_GLOBALS['menu_fixed']		= true;ORGANICS_GLOBALS['menu_mobile']	= 1023;ORGANICS_GLOBALS['menu_slider']     = true;ORGANICS_GLOBALS['demo_time']		= 0;ORGANICS_GLOBALS['media_elements_enabled'] = true;ORGANICS_GLOBALS['ajax_search_enabled'] 	= true;ORGANICS_GLOBALS['ajax_search_min_length']	= 3;ORGANICS_GLOBALS['ajax_search_delay']		= 200;ORGANICS_GLOBALS['css_animation']      = true;ORGANICS_GLOBALS['menu_animation_in']  = 'fadeIn';ORGANICS_GLOBALS['menu_animation_out'] = 'fadeOut';ORGANICS_GLOBALS['popup_engine']	= 'magnific';ORGANICS_GLOBALS['email_mask']		= '^([a-zA-Z0-9_\-]+\.)*[a-zA-Z0-9_\-]+@[a-z0-9_\-]+(\.[a-z0-9_\-]+)*\.[a-z]{2,6}$';ORGANICS_GLOBALS['contacts_maxlength']	= 1000;ORGANICS_GLOBALS['comments_maxlength']	= 1000;ORGANICS_GLOBALS['remember_visitors_settings']	= false;ORGANICS_GLOBALS['admin_mode']			= false;ORGANICS_GLOBALS['isotope_resize_delta']	= 0.3;ORGANICS_GLOBALS['error_message_box']	= null;ORGANICS_GLOBALS['viewmore_busy']		= false;ORGANICS_GLOBALS['video_resize_inited']	= false;ORGANICS_GLOBALS['top_panel_height']		= 0;</script>	<script type="text/javascript">
-		var c = document.body.className;
-		c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
-		document.body.className = c;
-	</script>
-	<link rel='stylesheet' id='organics-messages-style-css'  href="{{asset('website_css/themes/organics/fw/js/core.messages/core.messages.css')}}" type='text/css' media='all' />
-<link rel='stylesheet' id='organics-magnific-style-css'  href="{{asset('website_css/themes/organics/fw/js/magnific/magnific-popup.css')}}" type='text/css' media='all' />
-<script type='text/javascript'>
-/* <![CDATA[ */
-var TRX_UTILS_STORAGE = {"ajax_url":"http:\/\/greenliving.vip\/wp-admin\/admin-ajax.php","ajax_nonce":"e69ff56c17","site_url":"http:\/\/greenliving.vip","user_logged_in":"0","email_mask":"^([a-zA-Z0-9_\\-]+\\.)*[a-zA-Z0-9_\\-]+@[a-z0-9_\\-]+(\\.[a-z0-9_\\-]+)*\\.[a-z]{2,6}$","msg_ajax_error":"Invalid server answer!","msg_error_global":"Invalid field's value!","msg_name_empty":"The name can't be empty","msg_email_empty":"Too short (or empty) email address","msg_email_not_valid":"E-mail address is invalid","msg_text_empty":"The message text can't be empty","msg_send_complete":"Send message complete!","msg_send_error":"Transmit failed!","login_via_ajax":"1","msg_login_empty":"The Login field can't be empty","msg_login_long":"The Login field is too long","msg_password_empty":"The password can't be empty and shorter then 4 characters","msg_password_long":"The password is too long","msg_login_success":"Login success! The page will be reloaded in 3 sec.","msg_login_error":"Login failed!","msg_not_agree":"Please, read and check 'Terms and Conditions'","msg_email_long":"E-mail address is too long","msg_password_not_equal":"The passwords in both fields are not equal","msg_registration_success":"Registration success! Please log in!","msg_registration_error":"Registration failed!"};
-/* ]]> */
-</script>
 
 @endsection

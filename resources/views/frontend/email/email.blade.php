@@ -115,8 +115,7 @@
 																						</tr>
 																						<tr>
 																							<td align="left" class="info_cart_title" valign="middle">Xã/Phường/thị trấn</td>
-																							<td align="left" valign="top">
-																								<div id="districtdiv">{{$data_dh['area']}}</div>
+																							<td align="left" valign="top">{{$data_dh['area']}}
 																							</td>
 																						</tr>
 																						

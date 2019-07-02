@@ -230,4 +230,11 @@ return [
 
     ],
 
+    // 'nganluong' => [
+    //     'url' => env('APP_NGANLUONG_URL', 'https://sandbox.nganluong.vn:8088/nl35/checkout.php'),
+    //     'receiver' => env('APP_RECEIVER', 'demo@nganluong.vn'),// Email tài khoản Ngân Lượng
+    //     'merchant_id' => env('APP_MERCHANT_ID', '36680'),// Mã kết nối
+    //     'merchant_pass' => env('APP_MERCHANT_PASS', 'matkhauketnoi'),// Mật khẩu kết nối 
+    // ]
+
 ];

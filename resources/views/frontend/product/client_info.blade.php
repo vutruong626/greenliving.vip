@@ -6,11 +6,11 @@
         <div class="content_wrap">
             <h1 class="page_title">Kiểm tra</h1>
             <div class="breadcrumbs">
-                <a class="breadcrumbs_item home" href="/">Trang chủ</a>
+                <a class="breadcrumbs_item home" href="/getClientInfo">Trang chủ</a>
                 <span class="breadcrumbs_delimiter"></span>
                 <a class="breadcrumbs_item home" href="{{route('you_cart')}}">Giỏ hàng của bạn</a>
                 <span class="breadcrumbs_delimiter"></span>
-                <span class="breadcrumbs_item current">Kiểm tra</span>					
+                <span class="breadcrumbs_item current">Kiểm tra</span>
             </div>
         </div>
     </div>
@@ -35,7 +35,7 @@
                         <div class="woocommerce">
                             <div class="woocommerce-notices-wrapper"></div>
                             <div class="woocommerce-form-login-toggle">
-                                
+
                                 <div class="woocommerce-notices-wrapper"></div>
                                 <form name="checkout" method="post" class="checkout woocommerce-checkout" action="{{route('client_info')}}" enctype="multipart/form-data" novalidate="novalidate">
                                         {{csrf_field()}}
@@ -62,7 +62,7 @@
                                                         <span class="woocommerce-input-wrapper" style="padding-left: 57px;">
                                                             <input type="tel" class="input-text " name="phone" id="billing_phone" placeholder="Số điện thoại" value="" autocomplete="tel"></span>
                                                     </p>
-                                                    @if ($errors->has('phone'))
+                                                        @if ($errors->has('phone'))
                                                             <div class="text-danger">{{ $errors->first('phone') }}</div>
                                                         @endif
                                                     <p class="form-row form-row-wide validate-required validate-email" id="billing_email_field" data-priority="21">
@@ -76,8 +76,6 @@
                                                             <div class="text-danger">{{ $errors->first('email') }}</div>
                                                         @endif
                                                     </p>
-                                                    
-                              
                                                     <p class="form-row form-row-wide validate-required" id="billing_address_1_field" data-priority="60">
                                                         <label for="billing_address_1" class="">Địa chỉ nhận hàng&nbsp;
                                                             <abbr class="required" title="bắt buộc">*</abbr>
@@ -88,95 +86,76 @@
                                                         @if ($errors->has('address'))
                                                             <div class="text-danger">{{ $errors->first('address') }}</div>
                                                         @endif
-                                                    </p> 
-                                                    <!-- <p class="form-row form-row-wide validate-required" id="billing_address_1_field" data-priority="60">
-                                                        <label for="billing_address_1" class="">Tình / Thành Phố &nbsp;
-                                                            <abbr class="required" title="bắt buộc">*</abbr>
-                                                        </label>
-                                                        <span class="woocommerce-input-wrapper">
-                                                            <input type="text" class="input-text " name="city" id="billing_address_1" placeholder="" value="" autocomplete="address-line1">
-                                                        </span>
-                                                        @if ($errors->has('city'))
-                                                            <div class="text-danger">{{ $errors->first('city') }}</div>
-                                                        @endif
-                                                    </p>  -->
-                                                    <!-- <p class="form-row form-row-wide validate-required" id="billing_address_1_field" data-priority="60">
-                                                        <label for="billing_address_1" class="">Quận / Huyện &nbsp;
-                                                            <abbr class="required" title="bắt buộc">*</abbr>
-                                                        </label>
-                                                        <span class="woocommerce-input-wrapper">
-                                                            <input type="text" class="input-text " name="district" id="billing_address_1" placeholder="" value="" autocomplete="address-line1">
-                                                        </span>
-                                                        @if ($errors->has('district'))
-                                                            <div class="text-danger">{{ $errors->first('district') }}</div>
-                                                        @endif
-                                                    </p> 
-                                                    <p class="form-row form-row-wide validate-required" id="billing_address_1_field" data-priority="60">
-                                                        <label for="billing_address_1" class="">Phường Xã &nbsp;
-                                                            <abbr class="required" title="bắt buộc">*</abbr>
-                                                        </label>
-                                                        <span class="woocommerce-input-wrapper">
-                                                            <input type="text" class="input-text " name="area" id="billing_address_1" placeholder="" value="" autocomplete="address-line1">
-                                                        </span>
-                                                        @if ($errors->has('area'))
-                                                            <div class="text-danger">{{ $errors->first('area') }}</div>
-                                                        @endif
-                                                    </p>  -->
-                                                    <!-- hwkjdhawks -->
-
+                                                    </p>
                                                     <p class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated" id="billing_state_field" data-priority="30">
                                                         <label for="city" class="">Tỉnh/Thành phố&nbsp;<abbr class="required" title="bắt buộc">*</abbr></label>
                                                         <span class="woocommerce-input-wrapper" style="padding-left: 44px;width: 62%;">
-                                                            <select name="city" id="city" class="js-example-basic-single"  data-placeholder="Chọn tỉnh/thành phố" tabindex="-1" aria-hidden="true" >
+                                                            <select name="city" id="city" class="js-example-basic-single btn-submit"  data-placeholder="Chọn tỉnh/thành phố" tabindex="-1" aria-hidden="true" >
                                                             <option value="all"></option>
                                                             @foreach($province as $item_province)
-                                                                <option value="{{$item_province->id}}">{{$item_province->name}}</option>
+                                                                <option value="{{$item_province->id}}" >{{$item_province->name}}</option>
                                                             @endforeach
                                                             </select>
                                                             @if ($errors->has('city'))
                                                                 <div class="text-danger">{{ $errors->first('city') }}</div>
                                                             @endif
-                                                            
+
                                                         </span>
                                                     </p>
 
-                                                    <p class="form-row form-row-wide address-field update_totals_on_change validate-required" id="billing_city_field" data-priority="40">
+                                                    <p class="form-row form-row-wide address-field update_totals_on_change validate-required append-district" id="billing_city_field" data-priority="40">
                                                         <label for="district" class="">Quận/Huyện&nbsp;<abbr class="required" title="bắt buộc">*</abbr></label>
                                                         <span class="woocommerce-input-wrapper" style="padding-left: 63px;width: 67%;">
                                                             <select name="district" id="district" class="js-example-basic-single" data-allow_clear="true" data-placeholder="Chọn quận huyện" tabindex="-1" aria-hidden="true">
                                                                 <option value=""></option>
-                                                                @foreach($district as $item_District)
-                                                                <option value="{{$item_District->id}}">{{$item_District->name}}</option>
-                                                                @endforeach
                                                             </select>
 
                                                             @if ($errors->has('district'))
                                                                 <div class="text-danger">{{ $errors->first('district') }}</div>
                                                             @endif
-                                                            
+
                                                             <span class="dropdown-wrapper" aria-hidden="true"></span>
                                                         </span>
                                                     </span>
                                                     </p>
- 
-                                                    <p class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated" id="billing_address_2_field" data-priority="50">
-                                                        <label for="billing_address_2" class="">Xã/Phường/thị trấn&nbsp;<abbr class="required" title="bắt buộc">*</abbr></label>
-                                                        <span class="woocommerce-input-wrapper" style="padding-left: 20px;">
-                                                            <select name="area" id="area" class="js-example-basic-single" data-allow_clear="true" data-placeholder="Chọn xã/Phường/thị trấn" tabindex="-1" aria-hidden="true">
-                                                                <option value=""></option>
-                                                                @foreach($ward as $item_ward)
-                                                                <option value="{{$item_ward->id}}">{{$item_ward->name}}</option>
-                                                                @endforeach
-                                                            </select>
-                                                                @if ($errors->has('area'))
-                                                                    <div class="text-danger">{{ $errors->first('area') }}</div>
-                                                                @endif
-                                                            <span class="select2 select2-container select2-container--default select2-container--below select2-container--focus" dir="ltr" style="width: 1px;">
-                                                                <span class="dropdown-wrapper" aria-hidden="true"></span>
-                                                            </span>
+                                                    <p class="form-row form-row-wide validate-required" id="billing_address_1_field" data-priority="60">
+                                                        <label for="billing_address_1" class="">Xã/Phường/thị trấn&nbsp;
+                                                            <abbr class="required" title="bắt buộc">*</abbr>
+                                                        </label>
+                                                        <span class="woocommerce-input-wrapper" style="padding-left: 27px;">
+                                                            <input type="text" class="input-text " name="area" id="billing_address_1" placeholder="Ví dụ: Phường 1 or Phường 10" value="" autocomplete="address-line1">
                                                         </span>
+                                                        @if ($errors->has('area'))
+                                                            <div class="text-danger">{{ $errors->first('area') }}</div>
+                                                        @endif
                                                     </p>
-                                                    <!-- ncdkjsnadk -->
+                                                    <script>
+                                                        $(document).ready(function () {
+                                                            $("#city").on('change', function(){
+                                                                var cityId = this.value;
+
+                                                                $.ajax({
+                                                                    url:"/getRequired/" + cityId,
+                                                                    type: "GET",
+                                                                    async: false,
+                                                                    data: {
+
+                                                                    },
+                                                                    success: function (data) {
+                                                                        // console.log(data);
+                                                                        var element = '<label for="city" class="">Tỉnh/Thành phố&nbsp;<abbr class="required" title="bắt buộc">*</abbr></label>';
+                                                                            element += '<select name="district" id="district" class="js-example-basic-single" data-allow_clear="true" data-placeholder="Chọn quận huyện" tabindex="-1" aria-hidden="true" style="width: 53%;margin-left: 43px;">';
+                                                                        for(var i = 0; i < data.length; i++) {
+                                                                            element += '<option value="' + data[i].id + '">' + data[i].name + '</option>';
+                                                                        }
+                                                                        element += '</select>';
+                                                                        $('.append-district').html(element);
+
+                                                                    }
+                                                                })
+                                                            });
+                                                        })
+                                                    </script>
                                                 </div>
                                             </div>
                                         </div>
@@ -192,22 +171,49 @@
                                                         <span class="woocommerce-input-wrapper" style="width: 100%;">
                                                             <textarea name="note" class="input-text " id="order_comments" placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn."></textarea>
                                                         </span>
-                                                    </p> 
+                                                    </p>
                                                 </div>
-                                                <button type="submit" class="btn btn-success" style="font-family: roboto;font-weight: bold;float: right;background-color: #80B500;">XÁC NHẬN</button>
-
                                             </div>
                                         </div>
                                     </div>
+                                    <br><br>
+                                    <h3>Chọn hình thức thanh toán</h3>
+                                    <div class="container_vs2">
+                                        <div id="accordion">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <label class="container_vs2">
+                                                        <input type="radio" checked="checked" name="radio_1" value="1">
+                                                        <span class="checkmark_vs2" style="margin-top: 16px;"></span>
+                                                    </label>
+
+                                                    <a style="padding-left: 50px;font-size: 16px;"> Thanh toán tiền mặt khi nhận hàng </a>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <label class="container_vs2">
+                                                        <input type="radio" name="radio_1" value="2">
+                                                        <span class="checkmark_vs2" style="margin-top: 16px;"></span>
+                                                        <a href="https://www.nganluong.vn/vn/home.html"><img src="{{asset('images/logo-nganluong.png')}}" alt="" style="float: right;width: 40%;"></a>
+                                                    </label>
+                                                    <a style="padding-left: 50px;font-size: 16px;">Thanh toán trực tuyến</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-success" style="font-family: roboto;font-weight: bold;float: right;background-color: #80B500;">XÁC
+                                        NHẬN</button>
                                 </form>
                             </div>
                         </div>
-                    </section>  
+                    </section>
                     <section class="related_wrap related_wrap_empty"></section>
                 </article>
             </div>
         </div>
-            
+
 
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" style="float: right;">
             <div class="sidebar widget_area scheme_original right1101" role="complementary">
@@ -218,31 +224,23 @@
                             @foreach($gd_cordy_pay as $item_gd_cordy_pay)
                             <ul class="woocommerce-mini-cart cart_list product_list_widget ">
                                 <li class="woocommerce-mini-cart-item mini_cart_item">
-                                    <a href="{{asset('/cart/remove/'.$item_gd_cordy_pay->id),0}}" class="remove remove_from_cart_button" aria-label="Remove this item" data-product_id="2148" data-cart_item_key="e21e4e58ad9ab56e8a4634046da90113" data-product_sku="">×</a>													
+                                    <a href="{{asset('/cart/remove/'.$item_gd_cordy_pay->id),0}}" class="remove remove_from_cart_button" aria-label="Remove this item" data-product_id="2148" data-cart_item_key="e21e4e58ad9ab56e8a4634046da90113" data-product_sku="">×</a>
                                     <a href="#" style="    margin-bottom: -23px;">
-                                        <img width="570" height="703" src="{{asset('storage/'.$item_gd_cordy_pay->image)}}" 
-                                                class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""  
-                                                sizes="(max-width: 570px) 100vw, 570px" ><p style="height: 23px; overflow-y: hidden;">{{$item_gd_cordy_pay->name}}</p>						
+                                        <img width="570" height="703" src="{{asset('storage/'.$item_gd_cordy_pay->image)}}"
+                                                class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""
+                                                sizes="(max-width: 570px) 100vw, 570px" ><p style="height: 23px; overflow-y: hidden;">{{$item_gd_cordy_pay->name}}</p>
                                     </a>
-                                    <span class="quantity"> {{$item_gd_cordy_pay['qty']}}× 
+                                    <span class="quantity"> {{$item_gd_cordy_pay['qty']}}×
                                         <span class="woocommerce-Price-amount amount">
                                             <span class="woocommerce-Price-currencySymbol" id="p_{{$item_gd_cordy_pay->id}}"> {{number_format($item_gd_cordy_pay->price)}} VND</span>
                                         </span>
-                                    </span>					
+                                    </span>
                                 </li>
                             </ul>
                             @endforeach
-
-                            <!-- <p class="woocommerce-mini-cart__total total">
-                                <strong>Subtotal:</strong> 
-                                <span class="woocommerce-Price-amount amount">
-                                    <span class="woocommerce-Price-currencySymbol"></span>1232$</span>
-                            </p> -->
-
                             <p class="woocommerce-mini-cart__buttons buttons">
-                                <!-- <a href="" class="button wc-forward">View cart</a> -->
                                 <p class="woocommerce-mini-cart__total total">
-										<strong>Tổng tiền:</strong> 
+										<strong>Tổng tiền:</strong>
 										<span class="woocommerce-Price-amount amount" style="color: red;">
 										<span class="woocommerce-Price-currencySymbol"></span>{{number_format($cart_detail['weight'],0)}} VNĐ</span>
 									</p>
@@ -261,34 +259,86 @@
                         <h5 class="widget_title">DANH  MỤC SẢN PHẨM </h5>
                         <ul class="product-categories">
                             <li class="cat-item cat-item-96">
-                                <a href="{{route('product')}}">Cordyx</a> 
+                                <a href="{{route('product')}}">Cordyx</a>
                                 <span class="count">(1)</span>
                             </li>
-                            
+
                         </ul>
                     </aside>
-                    
+
                 </div>
             </div> <!-- /.sidebar -->
         </div>
     </div>
 </div>
 
-<script> 
-// In your Javascript (external .js resource or <script> tag)
-    $(document).ready(function() {
-        $('.js-example-basic-single').select2();
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <head>
+<style>
+.container_vs2 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
+/* Hide the browser's default radio button */
+.container_vs2 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
 
-        $("#city").on('change', function(){    // 2nd (A)
-            console.log('change');
-            // do your code here
-            // It will specifically called on change of your element    
+/* Create a custom radio button */
+.checkmark_vs2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
 
-        });
-    });
+/* On mouse-over, add a grey background color */
+.container_vs2:hover input ~ .checkmark_vs2 {
+  background-color: #ccc;
+}
 
-    
-</script>
+/* When the radio button is checked, add a blue background */
+.container_vs2 input:checked ~ .checkmark_vs2 {
+  background-color: #2196F3;
+}
 
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark_vs2:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container_vs2 input:checked ~ .checkmark_vs2:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container_vs2 .checkmark_vs2:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+</style>
 @endsection

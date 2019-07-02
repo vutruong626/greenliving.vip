@@ -93,20 +93,25 @@
                                 </ul>
                             </div>
                             @endif
-                            <div class="panel panel-bordered panel-primary">
+                            
+                            <div class="panel">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">
-                                    Tiêu Đề 
-                                    </h3>
+                                    <h3 class="panel-title">Tiêu Đề </h3>
                                     <div class="panel-actions">
-                                        <a class="panel-action voyager-angle-down" data-toggle="panel-collapse" aria-hidden="true"></a>
+                                        <a class="panel-action voyager-resize-full" data-toggle="panel-fullscreen" aria-hidden="true"></a>
                                     </div>
                                 </div>
+
                                 <div class="panel-body">
-                                    <input type="text" class="form-control" id="title" name="title" placeholder="Tiêu Đề "
-                                        value="@if(isset($dataTypeContent->title)){{ $dataTypeContent->title }}@endif">
+
+                                    @php
+                                        $dataTypeRows = $dataType->{(isset($dataTypeContent->id) ? 'editRows' : 'addRows' )};
+                                        $row = $dataTypeRows->where('field', 'title')->first();
+                                    @endphp
+                                    {!! app('voyager')->formField($row, $dataType, $dataTypeContent) !!}
                                 </div>
-                            </div>
+
+                            </div><!-- .panel -->
                             <div class="panel panel-bordered panel-primary">
                                 <div class="panel-heading">
                                     <h3 class="panel-title">
