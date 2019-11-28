@@ -10,21 +10,27 @@ class Category extends Model
 {
     use Translatable;
 
-    protected $translatable = ['slug', 'name'];
+    protected $translatable = ['slug', 'name','parent_id'];
 
     protected $table = 'categories';
 
     protected $fillable = ['slug', 'name'];
 
-    public function posts() 
+    // public function posts() 
+    // {
+    //     return $this->hasMany(Voyager::modelClass('Post'))
+    //         ->published()
+    //         ->orderBy('created_at', 'DESC');
+    // }
+
+    // public function parentId()
+    // {
+    //     return $this->belongsTo(self::class);
+    // }
+    public function products() 
     {
-        return $this->hasMany(Voyager::modelClass('Post'))
+        return $this->hasMany(Voyager::modelClass('Product'))
             ->published()
             ->orderBy('created_at', 'DESC');
-    }
-
-    public function parentId()
-    {
-        return $this->belongsTo(self::class);
     }
 }

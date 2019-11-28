@@ -3,6 +3,12 @@
 <title>{{ !empty($news->seo_title)?$news->seo_title:$news->title }}</title>
 <meta name="description" content="{{ $news->meta_description }}" />
 <meta name="keywords" content="{{ $news->meta_keywords }}" />
+<meta name="og:image" content="{{asset('storage/'.$news->image)}}" />
+<meta name="og:url" content="https://www.greenliving.vip/thong-tin-can-quan-tam/{{ $news->slug }}" />
+<link rel="canonical" href="https://www.greenliving.vip/thong-tin-can-quan-tam/{{ $news->slug }}">
+<meta property="og:type" content="{{ $news->loai_sanphams_id }}" />
+<meta property="og:type" content="{{!empty($news->seo_title)?$news->seo_title:$news->title}}" />
+<meta property="og:title" content="{{!empty($news->seo_title)?$news->seo_title:$news->title}}" />
 @parent
 @endsection
 @section('content')
@@ -11,9 +17,9 @@
         <div class="content_wrap">
             <h1 class="page_title">Thông tin cần quan tâm </h1>
             <div class="breadcrumbs">
-                <a class="breadcrumbs_item home" href="">Trang chủ </a>
+                <a class="breadcrumbs_item home cut-link" href="">Trang chủ </a>
                 <span class="breadcrumbs_delimiter"></span>
-                <a class="breadcrumbs_item home" href="{{route('news')}}">Thông tin cần quan tâm </a>
+                <a class="breadcrumbs_item home cut-link" href="{{route('news')}}">Thông tin cần quan tâm </a>
 
                 <span class="breadcrumbs_item current"> {{$news->name}}</span>
             </div>
@@ -70,7 +76,7 @@
                         <ul class="product_list_widget">
                             @foreach($show_list as $item_show_list)
                             <li>
-                                <a href="{{route('detail_news',$item_show_list->slug)}}"
+                                <a class="cut-link" href="{{route('detail_news',$item_show_list->slug)}}"
                                     style="overflow-y: hidden;height: 65px;width: 260px;">
                                     <img width="570" height="703" src="{{asset('storage/'.$item_show_list->image)}}"
                                         class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"
@@ -80,7 +86,7 @@
                                             {{asset('storage/'.$item_show_list->image)}} 300w, 
                                             {{asset('storage/'.$item_show_list->image)}} 628w"
                                         sizes="(max-width: 570px) 100vw, 570px" style="width: 7.6875em;">
-                                    <span class="product-title">{{$item_show_list->name}}</span>
+                                    <span class="product-title" style="line-height: 21px;">{{$item_show_list->name}}</span>
                                 </a>
 
                             </li>

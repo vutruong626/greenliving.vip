@@ -35,7 +35,7 @@
             <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                 <aside id="woocommerce_product_categories-3"
                     class="widget_number_3 widget woocommerce widget_product_categories">
-                    <h5 class="widget_title">THỂ LOẠI CÂU HỎI</h5>
+                    <h5 class="widget_title">LOẠI CÂU HỎI</h5>
                     <ul class="product-categories">
                         <div class="sidenav" style="font-weight: 600;">
                             <li class="dropdown-btn">Sản Phẩm
@@ -50,7 +50,7 @@
                     </ul>
                     <ul class="product-categories">
                         <div class="sidenav" style="font-weight: 600;">
-                            <li class="dropdown-btn">Loại câu hỏi
+                            <li class="dropdown-btn">Bệnh Học
                             </li>
                             <ul id="myBtnContainer">
                                 @foreach($cate_faq as $item_faq_list)
@@ -67,12 +67,9 @@
     </div>
 </div>
 <script>
-function filterSelectionfaq(c) {
-
-    console.log(c);
+    function filterSelectionfaq(c) {
     var x, i;
     x = document.getElementsByClassName("list_faq");
-    console.log(x);
     if (c == "all") c = "";
     for (i = 0; i < x.length; i++) {
         w3RemoveClass(x[i], "show");
@@ -88,7 +85,6 @@ function filterSelectionfaq(c) {
         },
         success: function(res) {
             data = JSON.parse(res);
-            console.log(data);
             var element = '';
             if (data.length > 0) {
                 for (var i = 0; i < data.length; i++) {
@@ -145,13 +141,6 @@ for (var i = 0; i < btns.length; i++) {
     });
 }
 </script>
-<!-- <script>
-                $(document).ready(function() {
-                    $(".flip").click(function() {
-                        $(".panel").slideToggle("slow");
-                    });
-                });
-                </script> -->
 <style>
 .success {
     border-color: #80b500;

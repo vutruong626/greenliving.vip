@@ -1,8 +1,6 @@
 @extends('frontend.master')
 @section('head')
 <title>Cao Nấm Trùng Thảo Cordy-X MHD PHARMA </title>
-<meta name="description"
-    content="Cao Nấm Trùng Thảo Cordy-X là sản phẩm cao đặc chứa tinh chất Đông Trùng Hạ Thảo và tinh chất Nấm Linh Chi. Công nghệ chiết xuất PHÂN TỬ giúp cao đặc hoà tan và thẩm thấu nhanh.">
 <meta name="keywords" content="Cao Nấm Trùng Thảo, Đông Trùng Hạ Thảo, greenliving, green living" />
 @parent
 @endsection
@@ -19,20 +17,19 @@
             @foreach($sliders as $key=>$item_slider)
             <div class="item @if($key == 0) active @endif">
                 <a href="{{$item_slider->url}}">
-                    <img class="first-slide" src="{{asset('storage/'.$item_slider->image)}}" alt="First slide"
-                        style="width: 100%;">
+                    <img class="first-slide" src="{{asset('storage/'.$item_slider->image)}}"
+                        alt="{{$item_slider->name}}" style="width: 100%;">
                 </a>
                 <!-- <div class="container">
-                                            <div class="carousel-caption sadw" >
-                                                <h1 class="vt-carout">{{$item_slider->title}}</h1>
-                                                <p><a class="btn btn-lg btn-success" href="{{$item_slider->url}}" role="button">ĐỌC THÊM</a></p>
-                                            </div>
-                                        </div> -->
+            <div class="carousel-caption sadw" >
+                <h1 class="vt-carout">{{$item_slider->title}}</h1>
+                <p><a class="btn btn-lg btn-success" href="{{$item_slider->url}}" role="button">ĐỌC THÊM</a></p>
+            </div>
+            </div> -->
             </div>
             @endforeach
         </div>
     </div>
-    
     <div class="content_wrap">
         <div class="content">
             <article
@@ -40,7 +37,6 @@
                 itemscope itemtype="http://schema.org/Article">
                 <section class="post_content" itemprop="articleBody">
                     <div class="sc_reviews alignright"></div>
-
                     <div class="vc_row wpb_row vc_row-fluid" style="margin-top: 50px;">
                         @foreach($gioithieu as $item_gioithieu)
                         <div class="wpb_column vc_column_container vc_col-sm-6 vc_hidden-md vc_hidden-sm vc_hidden-xs">
@@ -64,12 +60,11 @@
                                                                         style="height:242px;">
                                                                         <img class="zoom"
                                                                             src="{{asset('storage/'.$item_gioithieu->image)}}"
-                                                                            alt="" style="height:242px;" />
+                                                                            alt="{{$item_gioithieu->name}}" style="height:242px;" />
                                                                     </figure>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                       
                                                         <div class="column-1_2 sc_column_item sc_column_item_2 even">
                                                             <div class="sc_section">
                                                                 <div class="sc_section_inner">
@@ -78,22 +73,22 @@
                                                                             <p><a
                                                                                     href="#">{{$item_gioithieu->function}}</a>
                                                                             </p>
-
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <h2 class="sc_title sc_title_regular"
-                                                                style="text-transform: capitalize; letter-spacing: 0px;margin-top:0px;margin-bottom:0.2em;	font-weight:700; height: 85px; overflow-y: hidden;">
-                                                                {{$item_gioithieu->name}}</h2>
+                                                                style="text-transform: capitalize; letter-spacing: 0px;margin-top:0px;margin-bottom:0.2em; font-weight:700; height: 85px; overflow-y: hidden;">
+                                                                {{$item_gioithieu->name}}
+                                                            </h2>
                                                             <div class="sc_section">
                                                                 <div class="sc_section_inner">
                                                                     <div class="wpb_text_column wpb_content_element ">
                                                                         <div class="wpb_wrapper">
                                                                             <p
                                                                                 style="height: 100px; overflow-y: hidden;">
-                                                                                {{$item_gioithieu->title}}</p>
-
+                                                                                {{$item_gioithieu->title}}
+                                                                            </p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -101,7 +96,7 @@
                                                             <div class="vc_empty_space" style="height: 2.4em">
                                                                 <span class="vc_empty_space_inner"></span>
                                                             </div>
-                                                            <a href="{{route('about',$item_gioithieu->slug)}}"
+                                                            <a href="{{route('about',$item_gioithieu->slug)}}" 
                                                                 class="sc_button sc_button_square sc_button_style_filled sc_button_size_small  sc_button_iconed none">đọc
                                                                 thêm</a>
                                                         </div>
@@ -154,22 +149,22 @@
                                                                     <div class="wpb_text_column wpb_content_element ">
                                                                         <div class="wpb_wrapper">
                                                                             <p>{{$item_gioithieu->function}}</p>
-
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <h2 class="sc_title sc_title_regular"
                                                                 style="text-transform: capitalize; letter-spacing: 0px;margin-top:0px;margin-bottom:0.2em;font-weight:700;">
-                                                                {{$item_gioithieu->name}}</h2>
+                                                                {{$item_gioithieu->name}}
+                                                            </h2>
                                                             <div class="sc_section">
                                                                 <div class="sc_section_inner">
                                                                     <div class="wpb_text_column wpb_content_element ">
                                                                         <div class="wpb_wrapper">
                                                                             <p
                                                                                 style="height: 100px; overflow-y: hidden;">
-                                                                                {{$item_gioithieu->title}}</p>
-
+                                                                                {{$item_gioithieu->title}}
+                                                                            </p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -177,8 +172,8 @@
                                                             <div class="vc_empty_space" style="height: 2.4em">
                                                                 <span class="vc_empty_space_inner"></span>
                                                             </div>
-                                                            <a href="{{route('about',$item_gioithieu->slug)}}"
-                                                                class="sc_button sc_button_square sc_button_style_filled sc_button_size_small  sc_button_iconed none">đọc
+                                                            <a href="{{route('about',$item_gioithieu->slug)}}" title="doc them"
+                                                                class="sc_button sc_button_square sc_button_style_filled sc_button_size_small  sc_button_iconed none" >đọc
                                                                 thêm</a>
                                                         </div>
                                                     </div>
@@ -253,10 +248,9 @@
                                 <div class="wpb_wrapper">
                                     <h3 class="sc_title sc_title_regular sc_align_left"
                                         style="margin-top:3.5em;text-align:left;"
-                                        data-animation="animated fadeIn normal">Gia đình Cordy</h3>
+                                        data-animation="animated fadeIn normal">Sản Phẩm</h3>
                                     <article class="myportfolio-container shop-organics source_type_post"
                                         id="esg-grid-18-1-wrap">
-
                                         <div id="esg-grid-18-1" class="esg-grid"
                                             style="background: transparent;padding: 0px 0px 0px 0px ; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">
                                             <article class="esg-filters esg-singlefilters"
@@ -298,23 +292,18 @@
                                                                     rel="" data-product_id="1346" data-product_sku=""
                                                                     class="eg-arthur-organic-element-28 eg-post-1346 button add_to_cart_button ">
                                                                     Thêm vào giỏ hàng</a>
-
                                                             </div>
                                                         </div>
                                                         <div class="esg-entry-content eg-arthur-organic-content">
                                                             <div
                                                                 class="esg-content eg-post-1346 eg-arthur-organic-element-36-a">
                                                                 <a class="eg-arthur-organic-element-36 eg-post-1346"
-                                                                    href="{{route('detail_product',$item_gd_cordy->slug)}}"
+                                                                    href="{{route('chitietsanpham',$item_gd_cordy->slug)}}"
                                                                     target="_self"
-                                                                    style="height: 20px; overflow-y: hidden;">{{$item_gd_cordy->name}}</a>
+                                                                    style="height: 40px; overflow-y: hidden;">{{$item_gd_cordy->seo_title}}</a>
                                                             </div>
-                                                            <div
-                                                                class="esg-content eg-post-1346 eg-arthur-organic-element-1-a">
-                                                                <a class="eg-arthur-organic-element-1 eg-post-1346"
-                                                                    href="product-category/organic-dairy/index.html"
-                                                                    rel="tag">{{$item_gd_cordy->functions}}</a>
-                                                            </div>
+                                                            
+                                                            
                                                             <div
                                                                 class="esg-content eg-post-1346 eg-arthur-organic-element-25">
                                                                 <ins>
@@ -323,11 +312,16 @@
                                                                         VND</span>
                                                                 </ins>
                                                             </div>
+                                                            <div
+                                                                class="esg-content eg-post-1346 eg-arthur-organic-element-1-a">
+                                                                <a class="eg-arthur-organic-element-1 eg-post-1346"
+                                                                    href="product-category/organic-dairy/index.html"
+                                                                    rel="tag">{{$item_gd_cordy->title}}</a>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </li>
                                                 @endforeach
-
                                             </ul>
                                         </div>
                                     </article>
@@ -586,7 +580,8 @@
                             <div class="vc_column-inner ">
                                 <div class="wpb_wrapper ">
                                     <h1 class="title_center" style="font-size: 30px;">CAO NẤM TRÙNG THẢO CORDY-X </br>
-                                        QUÀ TẶNG SỨC KHỎE CHO NGƯỜI THÂN YÊU NHẤT </h1>
+                                        QUÀ TẶNG SỨC KHỎE CHO NGƯỜI THÂN YÊU NHẤT
+                                    </h1>
                                 </div>
                             </div>
                         </div>
@@ -600,7 +595,6 @@
                                         data-animation="animated fadeInUp normal">Thông tin cần Quan tâm</h3>
                                     <article class="myportfolio-container blogger2 source_type_post"
                                         id="esg-grid-21-2-wrap">
-
                                         <div id="esg-grid-21-2" class="esg-grid"
                                             style="background: transparent;padding: 0px 0px 0px 0px ; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;">
                                             <article class="esg-filters esg-singlefilters"
@@ -625,16 +619,13 @@
                                                             <img src="{{asset('storage/'.$item_news->image)}}" alt=""
                                                                 width="870" height="490">
                                                         </div>
-
                                                         <div class="esg-entry-cover esg-fade" data-delay="0"
                                                             data-clickable="on">
-
                                                             <a class="eg-invisiblebutton"
                                                                 href="{{route('detail_news',$item_news->slug)}}"
                                                                 target="_self"></a>
                                                             <div class="esg-overlay esg-fade eg-blogger-container"
                                                                 data-delay="0"></div>
-
                                                             <div class="esg-center eg-post-2001 eg-blogger-element-1-a">
                                                                 <a class="eg-blogger-element-1 eg-post-2001"
                                                                     href="{{route('detail_news',$item_news->slug)}}"
@@ -649,22 +640,23 @@
                                                                 <a class="eg-blogger-element-0 eg-post-2001"
                                                                     href="{{route('detail_news',$item_news->slug)}}"
                                                                     target="_self"
-                                                                    >{{$item_news->name}}</a>
+                                                                    style="height: 43px; overflow-y: hidden;">{{$item_news->name}}</a>
                                                             </div>
                                                             <div class="esg-content eg-post-2001 eg-blogger-element-3">
-                                                                {{$item_news->created_at}}</div>
+                                                                {{$item_news->created_at}}
+                                                            </div>
                                                             <div class="esg-content eg-post-2001 eg-handlehideunder eg-blogger-element-29"
                                                                 data-hideunder="2000" data-hidetype="visibility">/</div>
                                                             <div class="esg-content eg-blogger-element-22 esg-none esg-clear"
                                                                 style="height: 5px; visibility: hidden;"></div>
                                                             <div class="esg-content eg-post-2001 eg-blogger-element-6"
                                                                 style="height: 85px; overflow-y: hidden;">
-                                                                {{$item_news->title}}</div>
+                                                                {{$item_news->title}}
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </li>
                                                 @endforeach
-
                                             </ul>
                                         </div>
                                     </article>
@@ -920,8 +912,10 @@
                                 <p>
                                     <h3 class="sc_title sc_title_regular sc_align_left"
                                         style="margin-top:3.5em;margin-bottom:1.35em;text-align:left;">Khách hàng nói
-                                        gì?</h3>
-                                    <div class="sc_testimonials_wrap sc_section" style="background: #f2f5f8;">
+                                        gì?
+                                    </h3>
+                                    <div class="sc_testimonials_wrap sc_section"
+                                        style="background: #f2f5f8;padding-bottom: 0px;">
                                         <div class="sc_section_overlay" style="">
                                             <div id="sc_testimonials_132390921"
                                                 class="sc_testimonials sc_testimonials_style_testimonials-4  sc_slider_swiper swiper-slider-container sc_slider_pagination sc_slider_pagination_bottom sc_slider_nocontrols sc_slider_nopagination sc_slider_controls sc_slider_controls_bottom sc_slider_height_auto aligncenter"
@@ -935,7 +929,9 @@
                                                             class="sc_testimonial_item" style="height: auto;">
                                                             <div class="sc_testimonial_content"
                                                                 style="max-height: auto !important;">
-                                                                <p>{!! $item_clients->content !!}</p>
+                                                                <div>
+                                                                    <p>{!!$item_clients->content!!}</p>
+                                                                </div>
                                                             </div>
                                                             <div class="sc_testimonial_avatar"
                                                                 style="margin-top: 15px;">
@@ -948,26 +944,27 @@
                                                             <div class="sc_testimonial_author"
                                                                 style="margin-top: 34px;">
                                                                 <span
-                                                                    class="sc_testimonial_author_name">{{$item_clients->name}}</span><span
-                                                                    class="sc_testimonial_author_position">{{$item_clients->email}}</span>
+                                                                    class="sc_testimonial_author_name">{{$item_clients->name}}
+                                                                </span>
+                                                                <span
+                                                                    class="sc_testimonial_author_position">{{$item_clients->email}}
+                                                                </span>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     @endforeach
-
                                                 </div>
                                                 <div class="sc_slider_controls_wrap">
                                                     <a class="sc_slider_prev" href="#"></a>
                                                     <a class="sc_slider_next" href="#"></a>
                                                 </div>
-                                                <div class="sc_slider_pagination_wrap"></div>
+                                                <!-- <div class="sc_slider_pagination_wrap"></div> -->
                                             </div>
                                         </div>
                                     </div>
                                 </p>
                             </div>
                         </div>
-
                         <div class="content_wrap">
                             <div class="columns_wrap">
                                 <aside id="organics_widget_socials-2"
@@ -975,7 +972,8 @@
                                     <h5 class="widget_title">Kết nối với chúng tôi</h5>
                                     <div class="widget_inner">
                                         <div class="logo_descr">Để hỗ trợ tốt nhất cho quý khách hàng, có thể chia sẻ và
-                                            tìm hiểu thêm sản phẩm của chúng tôi tại các liên kết xã hội dưới đây:</div>
+                                            tìm hiểu thêm sản phẩm của chúng tôi tại các liên kết xã hội dưới đây:
+                                        </div>
                                         <div
                                             class="sc_socials sc_socials_type_icons sc_socials_shape_round sc_socials_size_tiny">
                                             <div class="sc_socials_item">
@@ -987,7 +985,6 @@
                                                 <a href="{{$contact->fanpage}}" target="_blank">
                                                     <img src="{{asset('images/facebook.png')}}" alt="">
                                                 </a>
-
                                             </div>
                                             <div class="sc_socials_item">
                                                 <a href="https://mhdpharma.com/" target="_blank" style="">
@@ -996,12 +993,8 @@
                                             </div>
                                         </div>
                                         <h5 style="margin-top: 1px;">Chính sách Công ty:</h5>
-                                        @foreach($privacy_policy as $item_privacy_policy)
-                                        <p><a href="{{route('privacy_policy',$item_privacy_policy->slug)}}"
-                                                style="color: #333333;">- {{$item_privacy_policy->name}} </a></p>
-                                        @endforeach
+                                        
                                     </div>
-
                                 </aside>
                                 <aside id="organics_widget_recent_posts-5"
                                     class="widget_number_2 column-1_4 widget widget_recent_posts">
@@ -1010,13 +1003,12 @@
                                     <article class="post_item with_thumb first">
                                         <div class="post_content">
                                             <p class="post_title">-
-                                                <a href="{{route('faq',$item_faq->id)}}"
-                                                    style="    color: #333333;">{{$item_faq->title}}</a>
+                                                <a class="cut-link" href="{{route('faq',$item_faq->id)}}"
+                                                    style="color: #333333;">{{$item_faq->title}}</a>
                                             </p>
                                         </div>
                                     </article>
                                     @endforeach
-
                                 </aside>
                                 <aside id="organics_widget_recent_posts-6"
                                     class="widget_number_4 column-1_4 widget widget_recent_posts">
@@ -1088,12 +1080,10 @@
                                 </aside>
                             </div>
                         </div>
-
                 </section>
             </article>
             <section class="related_wrap related_wrap_empty"></section>
         </div>
     </div>
 </div>
-
 @endsection

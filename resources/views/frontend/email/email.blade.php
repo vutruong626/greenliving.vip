@@ -48,11 +48,11 @@
 																			<tr>
 																				<td>
 																					<a href="" target="_blank" data-saferedirecturl="">
-																						<img id="" src="{{asset('storage/'.$v->image)}}" alt="{{$v->name}}" border="0" width="50" height="60" >
+																						<img id="" src="{{asset('storage/'.$v->image)}}" alt="{{$v->seo_title}}" border="0" width="50" height="60" >
 																					</a>
 																				</td>
 																				<td>
-																					<a href="" target="_blank" data-saferedirecturl="">{{$v->name}}</a>
+																					<a href="" target="_blank" data-saferedirecturl="">{{$v->seo_title}}</a>
 																				</td>
 																				<td style="color:#3a9504">{{number_format($v->price,0)}} <b> </b>
 																				</td>

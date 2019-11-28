@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US" class="scheme_original">
+<html lang="en-US" amp>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 @section('head')
 <meta name='robots' content='index,follow' />
@@ -8,8 +8,102 @@
 <meta name="format-detection" content="telephone=no">
 <meta name="csrf_token" content="{{ csrf_token() }}" />
 <meta name="google-site-verification" content="-FBsZZhWNQbQ1RQRp7nJisIaKBDLitgnOGWwRLels6A" />
+
 @show
-<meta name="csrf-token" content="{{ csrf_token() }}" />
+    <meta property="og:locale" content="Việt Nam" />
+    <meta property="og:site_name" content="Greenliving.vip" />
+    <link rel="og:image" href="{{asset('images/logo-MHD.png')}}" sizes="32x32" />
+    <link rel="og:image" href="{{asset('images/logo-MHD.png')}}" sizes="192x192" />
+    <link rel="https://www.greenliving.vip/" href="{{asset('images/logo MHD.png')}}" />
+    <meta name="https://www.greenliving.vip/" content="{{asset('images/logo MHD.png')}}" />
+    <link rel="icon" href="{{asset('images/logo-MHD.png')}}" sizes="32x32" />
+    <link rel="icon" href="{{asset('images/logo-MHD.png')}}" sizes="192x192" />
+<!-- amp -->
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "@id":"#website",
+    "name":"greenliving.vip",
+    "url":"https:\/\/www\/\/greenliving.vip/\/",
+
+    "headline": "Open-source framework for publishing content",
+    "datePublished": "2015-10-07T12:02:41Z",
+    "image": [
+        "logo.jpg"
+    ]
+}
+</script>
+<style amp-boilerplate>
+body {
+    -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+    -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+    -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+    animation: -amp-start 8s steps(1, end) 0s 1 normal both
+}
+
+@-webkit-keyframes -amp-start {
+    from {
+        visibility: hidden
+    }
+
+    to {
+        visibility: visible
+    }
+}
+
+@-moz-keyframes -amp-start {
+    from {
+        visibility: hidden
+    }
+
+    to {
+        visibility: visible
+    }
+}
+
+@-ms-keyframes -amp-start {
+    from {
+        visibility: hidden
+    }
+
+    to {
+        visibility: visible
+    }
+}
+
+@-o-keyframes -amp-start {
+    from {
+        visibility: hidden
+    }
+
+    to {
+        visibility: visible
+    }
+}
+
+@keyframes -amp-start {
+    from {
+        visibility: hidden
+    }
+
+    to {
+        visibility: visible
+    }
+}
+</style><noscript>
+    <style amp-boilerplate>
+    body {
+        -webkit-animation: none;
+        -moz-animation: none;
+        -ms-animation: none;
+        animation: none
+    }
+    </style>
+</noscript>
 <!-- Facebook Pixel Code -->
 <script>
 ! function(f, b, e, v, n, t, s) {
@@ -252,8 +346,7 @@ img.emoji {
     href="{{asset('css/wp-content/themes/organics/skins/trex2_no_less/skin.css')}}" type='text/css' media='all' />
 <link rel='stylesheet' id='organics-custom-style-css'
     href="{{asset('css/wp-content/themes/organics/fw/css/custom-style.css')}}" type='text/css' media='all' />
-<link rel='stylesheet'
-    href="{{asset('css/customstyle.css')}}" type='text/css' media='all' />
+<link rel='stylesheet' href="{{asset('css/customstyle.css')}}" type='text/css' media='all' />
 <style id='organics-custom-style-inline-css' type='text/css'>
 </style>
 <link rel='stylesheet' id='organics-responsive-style-css'
@@ -309,7 +402,7 @@ div.wpgdprc .wpgdprc-switch .wpgdprc-switch-inner:after {
 <script type='text/javascript'
     src="{{asset('css/wp-content/plugins/wp-gdpr-compliance/assets/vendor/micromodal/micromodal.min4f37.js?ver=1544035149')}}">
 </script>
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="{{asset('wp-includes/wlwmanifest.xml')}}" />
+<link rel="mhdpharma" type="mhdpharma" href="{{asset('wp-includes/wlwmanifest.xml')}}" />
 
 <script type="text/javascript">
 var ajaxRevslider;
@@ -393,10 +486,8 @@ jQuery(document).ready(function() {
     margin: 0 !important;
 }
 </style>
-<link rel="icon" href="{{asset('images/logo MHD.png')}}" sizes="32x32" />
-<link rel="icon" href="{{asset('images/logo MHD.png')}}" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="{{asset('images/logo MHD.png')}}" />
-<meta name="msapplication-TileImage" content="{{asset('images/logo MHD.png')}}" />
+
+
 <script type="text/javascript">
 function setREVStartSize(e) {
     try {
@@ -463,7 +554,7 @@ function setREVStartSize(e) {
                             <div class="top_panel_top_user_area">
                                 <ul id="menu_user" class="menu_user_nav">
                                     <li class="menu_user_cart">
-                                        <a href="#" class="top_panel_cart_button" data-items="0"
+                                        <a href="#" class="top_panel_cart_button cut-link" data-items="0"
                                             data-summa="&euro;0.00">
                                             <span class="contact_icon icon-shopping-cart13"></span>
                                             <span class="contact_label contact_cart_label">Giỏ hàng của bạn:</span>
@@ -515,7 +606,7 @@ function setREVStartSize(e) {
                                                                     VNĐ</span>
                                                             </p>
                                                             <p class="woocommerce-mini-cart__buttons buttons">
-                                                                <a href="{{route('you_cart')}}"
+                                                                <a href="{{route('show_thanhtoan_sanpham')}}"
                                                                     class="button wc-forward">Kiểm tra</a>
                                                             </p>
                                                             @endif
@@ -556,9 +647,10 @@ function setREVStartSize(e) {
                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1059 {{Request::is('gioi-thieu') ? 'active' : ' '}}">
                                                 <a href="{{route('about')}}">giới thiệu</a>
                                             </li>
+                                            
                                             <li id="menu-item-1502"
                                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1502 {{Request::is('san-pham') ? 'active' : ' '}}">
-                                                <a href="{{route('product')}}">Sản Phẩm </a>
+                                                <a href="{{route('showsanpham')}}">Sản Phẩm</a>
                                             </li>
                                             <li id="menu-item-2018"
                                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2018 {{Request::is('thong-tin-can-quan-tam.html') ? 'active' : ' '}}">
@@ -658,7 +750,7 @@ function setREVStartSize(e) {
                                                     </span>{{number_format($cart_detail['weight'],0)}} VNĐ</span>
                                             </p>
                                             <p class="woocommerce-mini-cart__buttons buttons">
-                                                <a href="{{route('you_cart')}}" class="button wc-forward">Kiểm tra</a>
+                                                <a href="{{route('show_thanhtoan_sanpham')}}" class="button wc-forward">Kiểm tra</a>
                                             </p>
                                             @endif
                                         </div>
@@ -755,7 +847,10 @@ function setREVStartSize(e) {
             <!-- content -->
             @yield('content')
             <!-- content -->
-
+            <div id="mySidenav" class="sidenav ">
+                <a href="https://www.facebook.com/GreenLivingSongXanh/?ref=br_tf&epa=SEARCH_BOX" id="facebook">Facebook &ensp;<i class="fab fa-facebook-square"></i></a>
+                <a href="https://www.youtube.com/channel/UCRUPmvS6bOyWTvrKgkRnaZw" id="youtube">Youtube&ensp;<i class="fab fa-youtube"></i></a> 
+            </div>
             <footer class="footer_wrap widget_area scheme_original">
                 <div class="footer_wrap_inner widget_area_inner">
                     <div class="content_wrap">
@@ -775,15 +870,16 @@ function setREVStartSize(e) {
                                         tư TP.Hồ Chí
                                         Minh cấp ngày 03/10/2011</p>
                                     <div class="logo_descr" style="width: 70%;"><a
-                                            href="http://online.gov.vn/HomePage/CustomWebsiteDisplay.aspx?DocId=54306"><img
-                                                src="http://greenliving.com/images/hinh.png" alt=""></a></div>
+                                            href="http://online.gov.vn/HomePage/CustomWebsiteDisplay.aspx?DocId=54306">
+                                            <img src="{{asset('images/hinh.png')}}" alt=""></a></div>
 
                                 </article>
 
                             </aside>
 
                             <aside id="organics_widget_recent_posts-5"
-                                class="widget_number_2 column-1_4 widget widget_recent_posts" style="    margin-bottom: 50px;">
+                                class="widget_number_2 column-1_4 widget widget_recent_posts"
+                                style="    margin-bottom: 50px;">
                                 <h5 class="widget_title">Liên Hệ</h5>
                                 @foreach($contact_munu as $item_contact)
                                 <article class="post_item with_thumb first" style="height: 66px;">
@@ -819,7 +915,7 @@ function setREVStartSize(e) {
                     </div>
                 </div>
             </footer>
-            <div class="footer-bottom" style="background: #373e4c;padding: 24px 0;color: white;margin-top: -100px;">
+            <div class="footer-bottom" style="background: #373e4c;padding: 24px 0;color: white;">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4">

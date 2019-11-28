@@ -5,7 +5,7 @@
         <div class="content_wrap">
             <h1 class="page_title">Thông tin cần quan tâm </h1>
             <div class="breadcrumbs">
-                <a class="breadcrumbs_item home" href="">Trang chủ </a>
+                <a class="breadcrumbs_item home cut-link" href="">Trang chủ</a>
                 <span class="breadcrumbs_delimiter"></span>
                 <span class="breadcrumbs_item current">Thông tin cần quan tâm </span>
             </div>
@@ -34,7 +34,7 @@
                                 style="width:100%"></a>
                         <div class="container">
                             <a href="{{route('detail_news',$item_news->slug)}}" style="text-decoration: none;">
-                                <h6 style="margin-top: 20px;overflow-y: hidden;height: 71px;font-size: 16px;font-weight: bold;">
+                                <h6 style="margin-top: 20px;font-size: 16px;font-weight: bold;">
                                     {{$item_news->name}}</h6>
                             </a>
                             <p class="title">{{$item_news->created_at}}</p>
@@ -45,8 +45,8 @@
 
                 @endforeach
             </div>
-                <div class="bt1121" style="text-align: center;">{{ $news->links() }}</div>
-            
+            <div class="bt1121" style="text-align: center;">{{ $news->links() }}</div>
+
             <!-- <section class="related_wrap related_wrap_empty"></section> -->
 
         </div>
@@ -58,7 +58,11 @@
 function filterSelection(c) {
     var x, i;
     x = document.getElementsByClassName("column");
-    if (c == "all") c = "";
+    if (c) {
+      $('.bt1121').hide();
+    } else {
+      $('.bt1121').show();
+    }
     for (i = 0; i < x.length; i++) {
         w3RemoveClass(x[i], "show");
         if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
@@ -72,12 +76,9 @@ function filterSelection(c) {
 
         },
         success: function(res) {
-            console.log(res);
             data = JSON.parse(res);
-            console.log(data);
             var element = '';
             if (data.length > 0) {
-
                 for (var i = 0; i < data.length; i++) {
                     var slug = data[i].slug;
                     element += '<div class="column zoom">' +
@@ -87,8 +88,9 @@ function filterSelection(c) {
                             '</a>' +
                             '<div class="container">' +
                                 '<a href="{{ route('detail_news','') }}/'+ slug +'">' +
-                                    '<h6 style="margin-top: 20px;overflow-y: hidden;height: 71px;font-size: 16px;font-weight: bold;">' + data[i].name + '</h6>' +
+                                    '<h6 style="margin-top: 20px;font-size: 16px;font-weight: bold;">' + data[i].name + '</h6>' +
                                 '</a>' +
+                                '<p class="title">'+ data[i].created_at +'</p>'+
                                 '<p style="margin-top: 20px;overflow-y: hidden;height: 86px;">' + data[i].title +'</p>'+
                             '</div>' +
                         '</div></div>';
@@ -137,16 +139,6 @@ for (var i = 0; i < btns.length; i++) {
 }
 </script>
 <style>
-html {
-    box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
-
 .column {
     float: left;
     width: 24.3%;
@@ -160,56 +152,21 @@ html {
         display: block;
     }
 }
-
+/*
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
+} */
 
 .container {
     width: 100%;
     padding: 0 16px;
 }
 
-.container::after,
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
 .title {
     color: grey;
 }
-
-.button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-}
-
 .button:hover {
     background-color: #555;
-}
-
-.zoom:hover {
-    -ms-transform: scale(1.5);
-    /* IE 9 */
-    -webkit-transform: scale(1.5);
-    /* Safari 3-8 */
-    transform: scale(1.1);
-}
-
-/* chọn danh mục cho news */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
 }
 
 /* The "show" class is added to the filtered elements */
@@ -217,13 +174,19 @@ html {
     display: block;
 }
 
+.card {
+      border: 1px solid rgb(255, 255, 255);
+}
 /* Style the buttons */
 .btn {
-    border: none;
-    outline: none;
+       /* border: none; */
+       outline: none;
     padding: 12px 16px;
     background-color: white;
     cursor: pointer;
+    border-radius: 50px;
+    border: 0px solid;
+    padding: 7px;
 }
 
 .btn:hover {

@@ -73,10 +73,9 @@
         h6 a {
             color: #3F2803
         }
-        
-        blockquote::before {
+        /* blockquote::before {
             color: #80B500
-        }
+        } */
         
         a,
         .scheme_dark a,
@@ -853,7 +852,9 @@
         }
         
         .widget_area_inner ul li {
-            color: #4C4841
+            color: #522903;
+            padding: 20px;
+            line-height: 0px;
         }
         
         .widget_area_inner ul li a {
@@ -2728,7 +2729,7 @@ transform: scale(1.5);
         }
         
         .eg-arthur-organic-element-36 {
-            font-size: 13px !important;
+            font-size: 16px !important;
             line-height: 20px !important;
             color: #3f2803 !important;
             font-weight: 700 !important;
@@ -2801,7 +2802,7 @@ transform: scale(1.5);
         .eg-arthur-organic-element-25 {
             font-size: 12px;
             line-height: 22px;
-            color: #b33451;
+            color: #ec1c22;
             font-weight: 400;
             display: block;
             text-align: left;
@@ -2913,4 +2914,13 @@ transform: scale(1.5);
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat
+        }
+        /*haunh        */
+        
+        a.cut-link {
+            text-decoration: none;
+        }
+        
+        .vt-borde {
+            border: 2px solid #80b500 !important;
         }

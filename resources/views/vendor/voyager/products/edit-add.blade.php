@@ -104,7 +104,7 @@
                             </div>
                         @endif
 
-                        <div class="panel-heading">
+                        <!-- <div class="panel-heading">
                             <h3 class="panel-title">
                                 Tiêu đề
                             </h3>
@@ -114,7 +114,27 @@
                         </div>
                         <div class="panel-body">
                             <input type="text" class="form-control" id="title" name="title" placeholder="Tiêu đề" value="@if(isset($dataTypeContent->title)){{ $dataTypeContent->title }}@endif">
+                        </div> -->
+                        <!-- fdsfmdl -->
+                        <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Tiêu đề</h3>
+                            <div class="panel-actions">
+                                <a class="panel-action voyager-resize-full" data-toggle="panel-fullscreen" aria-hidden="true"></a>
+                            </div>
                         </div>
+
+                        <div class="panel-body">
+
+                            @php
+                                $dataTypeRows = $dataType->{(isset($dataTypeContent->id) ? 'editRows' : 'addRows' )};
+                                $row = $dataTypeRows->where('field', 'title')->first();
+                            @endphp
+                            {!! app('voyager')->formField($row, $dataType, $dataTypeContent) !!}
+                        </div>
+
+                    </div><!-- .panel -->
+                        <!-- dfjfkjdf -->
                     </div>
                      <!-- ### meta_description_cty ### -->
                         

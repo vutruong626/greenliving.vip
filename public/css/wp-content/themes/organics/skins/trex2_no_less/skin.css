@@ -26,20 +26,20 @@
 10. Footer areas
 11. Utils
 12. Registration and Login popups
-13. Third party plugins
+13. Third party plugins    font-size: 17px;
    13.1 Media player
    13.2 WooCommerce
    13.3 Tribe Events
    13.4 BB Press
-14. Predefined classes for users
+14. Predefined classes     font-size: 17px;
 15. Shortcodes colors
 16  Shortcodes styling
 
--------------------------------------------------------------- */
+-----------------------    font-size: 17px;---------------------- */
 
 
 /* 1. Theme typography
--------------------------------------------------------------- */
+-----------------------    font-size: 17px;---------------------- */
 
 body,
 .copyright_style_emailer .copyright_text a {
@@ -3967,7 +3967,7 @@ blockquote.sc_quote:before {
 }
 
 .eg-arthur-organic-wrapper ins .amount {
-    font-size: 14px;
+    font-size: 17px;
     font-weight: 400;
     font-style: normal;
 }

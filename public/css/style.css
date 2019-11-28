@@ -1939,6 +1939,8 @@ Text Domain: organics
     .slider_boxed,
     .content_wrap,
     .content_container {
+        /*   haunh     width: 1170px;
+*/
         width: 1170px;
         margin: 0 auto;
     }
@@ -4231,7 +4233,7 @@ Text Domain: organics
     
     blockquote:before {
         font-family: 'Roboto';
-        content: '\e8b6';
+        /* content: '\e8b6'; */
         display: block;
         position: absolute;
         z-index: 1;
@@ -6703,6 +6705,7 @@ Text Domain: organics
     .testimonials_wrap.sc_section,
     .twitter_wrap.sc_section {
         padding: 0;
+        /*height: -500px;*/
     }
     
     .testimonials_wrap_inner,
@@ -6710,10 +6713,12 @@ Text Domain: organics
         background-repeat: no-repeat;
         background-position: center top;
     }
+    /*EditHTML HEIGHT AUTO haunh*/
     
     footer.testimonials_wrap .sc_section_overlay,
     footer.twitter_wrap .sc_section_overlay {
         padding: 3em 0;
+        /*height: -500px*/
     }
     /* Copyright area */
     
@@ -8744,4 +8749,51 @@ Text Domain: organics
         width: 100%;
         font-size: 18px;
         border-radius: 0;
+    }
+    /*Readmore */
+    
+    div.Read-More {
+        background-color: #80b500;
+        height: 120px;
+        width: auto;
+        overflow-y: scroll;
+    }
+    
+    .Edit-Contact {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    
+    #mySidenav a {
+        position: fixed;
+        left: -95px;
+        transition: 0.3s;
+        padding: 15px;
+        width: 150px;
+        text-decoration: none;
+        color: white;
+        border-radius: 0px 30px 30px 0px;
+    }
+    
+    #mySidenav a:hover {
+        left: 0;
+    }
+    
+    #facebook {
+        top: 350px;
+        background: #3B5998;
+        color: white;
+        line-height: 20px;
+    }
+    
+    #youtube {
+        top: 400px;
+        background: #bb0000;
+        color: white;
+        line-height: 20px;
+    }
+    
+    .svg-inline--fa.fa-w-18 {
+        width: 2.125em;
+        margin-left: 6px;
     }

@@ -7,7 +7,7 @@
         <div class="content_wrap">
             <h1 class="page_title">Giới thiệu </h1>
             <div class="breadcrumbs">
-                <a class="breadcrumbs_item home" href="/">Trang chủ</a>
+                <a class="breadcrumbs_item home cut-link" href="/">Trang chủ</a>
                 <span class="breadcrumbs_delimiter"></span>
                 <span class="breadcrumbs_item current">Giới thiệu </span>
             </div>
